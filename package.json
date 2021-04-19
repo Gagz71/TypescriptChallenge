@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run dev",
     "build": "tsc",
-    "lint": "eslint . & echo 'lint complete'"
+    "lint": "eslint . & echo 'lint complete'",
+    "dev": "ts-node-dev --transpile-only --respawn  ./src/challenge.ts",
+    "prod": "tsc && node ./built/src/challenge.js",
+    "debug": "tsc && node --inspect ./built/src/challenge.js"
   },
   "repository": {
     "type": "git",
